@@ -1,0 +1,390 @@
+:root {
+    --main-color: #28a745;
+    --main-color-hover: #228a3b;
+    --second-color: #0c3f69;
+    --second-color-hover: #0a375b;
+    --background-color: #ebffcc;
+}
+body{
+    font-family: 'Varela Round', sans-serif;
+    color: #484b52;
+}
+.custom_button{
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 10px 20px;
+}
+.main_button{
+    background-color: var(--main-color);
+}
+.main_button:hover{
+    background-color: var(--main-color-hover);
+}
+.second_button{
+    background-color: var(--second-color);
+}
+.second_button:hover{
+    background-color: var(--second-color-hover);
+}
+.section_title{
+    font-size: 1.75rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+/*HEADER*/
+.header_section{
+    background-color: white;
+    box-shadow: 0 0 4px rgba(51,51,51,.15);
+    min-height: 62px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.header_section_wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 5px;
+}
+
+.header_logo{
+    padding: 0 16px;
+}
+
+.header_logo > .box_img{
+    margin: 0 auto;
+    display: inline-block;
+    width: 50px;
+}
+
+.header_logo > .box_img > img{
+    width: 100%;
+}
+
+.header_logo > .box_name{
+    display: inline-block;
+    font-size: 1.5rem;
+    color: var(--second-color);
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+.header_nav > ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.header_nav > ul > li{
+    display: inline-block;
+    margin: 0 16px;
+}
+
+.header_nav > ul > li > a{
+    color: inherit;
+}
+
+.header_nav > ul > li > a:hover{
+    color: var(--main-color);
+}
+
+.header_nav > ul > li > a:hover{
+    text-decoration: none;
+}
+
+.header_nav_mobile{
+    display: none;
+}
+
+@media screen and (max-width: 520px){
+
+    .header_section_wrapper{
+        padding: 13px 0;
+    }
+
+    .header_logo > .box_img{
+        width: 30px;
+    }
+
+    .header_logo > .box_name{
+        font-size: 1rem;
+    }
+
+    .header_nav > ul > li {
+        margin: 0 8px;
+    }
+}
+
+@media screen and (max-width: 865px){
+    .header_nav > ul > .header_nav_item{
+        display: none;
+    }
+}
+
+/*HERO*/
+.hero_section{
+    background-color: white;
+    height: 100vh;
+    width: 100%;
+    margin-top: -62px;
+}
+
+.hero_section_wrapper{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100%;
+}
+
+.hero_section_text{
+    order: 1;
+    padding: 0 10px 0 30px;
+}
+
+.hero_section_text > div{
+    width: 80%;
+}
+
+.hero_section_text > div > h1{
+    font-size: 2rem;
+    color: var(--main-color);
+}
+
+.hero_section_text > div > h2{
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+.hero_section_text > div > h1, h2{
+    margin-bottom: 16px;
+}
+
+.hero_section_image{
+    order: 2;
+    background-image: url('../assets/img/hero.jpeg');
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    max-height: 400px;
+}
+
+@media screen and (max-width: 520px){
+    .hero_section_wrapper{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .hero_section_text{
+        align-items: center;
+        text-align: center;
+        order: 2;
+        padding: 16px 16px 0;
+    }
+
+    .hero_section_text > div{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .hero_section_image{
+        order: 1;
+    }
+}
+
+/*BENEFITS*/
+.benefits_section{
+    background-color: var(--background-color);;
+    width: 100%;
+    padding: 30px 0 0;
+}
+
+.benefits_wrapper{
+    padding: 62px 0;
+    height: 100%;
+}
+
+.benefits_content{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 30px;
+}
+
+.benefits_item{
+    max-width: 200px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.benefits_item_icon{
+    width: 100px;
+    margin: auto;
+}
+
+.benefits_item_icon > img{
+    width: 100%;
+}
+
+.benefits_item_text{
+    padding-top: 10px;
+}
+
+.benefits_item_text > p{
+    padding-top: 10px;
+    margin: 0;
+    margin-bottom: 5px;
+    color: var(--second-color);
+}
+
+.benefits_item_text > span{
+    font-size: 14px;
+}
+
+
+/*PLANS*/
+.plans_section{
+    width: 100%;
+    padding: 30px 0 0;
+}
+
+.plans_wrapper{
+    padding: 62px 0;
+    height: 100%;
+}
+
+.plans_content{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.plans_box{
+    padding: 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.plan_item{
+    box-sizing: border-box;
+    width: 250px;
+    height: 250px;
+    border: 3px solid #e8e8e8;
+    border-radius: 7px;
+    padding: 24px;
+    text-align: center;
+    transition: margin-top .5s linear;
+    margin-right: 11px;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+.plan_item:hover {
+    margin-top: -30px;
+    transition: margin-top .3s linear;
+}
+.plan_item_selected {
+    border-color: var(--main-color);
+}
+
+.plan_item_name{
+    color: var(--main-color);
+}
+/*ABOUT US*/
+.about_us_section{
+    background-color: var(--background-color);;
+    width: 100%;
+    padding: 30px 0;
+}
+
+.about_us_wrapper{
+    padding: 62px 0;
+    max-width: 350px;
+    margin: auto;
+    height: 100%;
+    text-align: center;
+}
+
+/*CONTACT*/
+.contact_section{
+    width: 100%;
+    padding: 30px 0;
+}
+
+.contact_wrapper{
+    padding: 62px 0;
+    height: 100%;
+}
+
+.contact_form{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+@media screen and (max-width: 520px){
+    .contact_form{
+        width: 90%;
+        margin: auto;
+    }
+}
+
+/*FOOTER*/
+
+.footer_section{
+    background-color: var(--second-color);
+    padding: 3em 0;
+}
+
+.footer_section_wrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.footer_section_information{
+    min-width: 300px;
+    padding: 10px 0;
+}
+
+.footer_section_information > h4{
+    color: white;
+}
+
+.footer_section_information > div{
+    margin-top: 10px;
+}
+
+.footer_section_information > div > p{
+    margin-bottom: 0;
+}
+
+.footer_section_information > .box_logo{
+    margin: 0 auto;
+    display: inline-block;
+    width: 100px;
+}
+
+.footer_section_information > .box_logo > img{
+    width: 100%;
+}
+
+.footer_section_information > .box_name{
+    display: inline-block;
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
+}
+.icon_footer{
+    width: 30px;
+    margin: 0 5px;
+}
